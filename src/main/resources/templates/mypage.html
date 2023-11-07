@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>WebThing</title>
+<link rel="stylesheet" href="/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>マイページ</h1>
+	<form method="post" action="/logout">
+		<input type="submit" class="navButton topLeading destructive" value="サインアウト" />
+	</form>
+	<div class="groupContainer">
+		<div class="groupBox">
+			<b th:text="|${name}様、ようこそ|"></b>
+			<hr>
+			<p th:text="|最後サインイン：${lastSignIn}|"></p>
+		</div>
+		<div class="groupBox">
+			<a href="/mypage/passwordreset">パスワードをリセット</a>
+		</div>
+		<h2>マイアイテム</h2>
+		<div class="groupBox">
+			<th:block th:each="item, items:${items}" th:if="${items.index} <3" th:object="${item}">
+				<span class="horizontalStack">
+					<b th:text="*{name}"></b>
+					<span></span>
+					<p class="secondary" th:text="*{brand}"></p>
+				</span>
+				<!-- <hr th:unless="${items.last}"> -->
+				<hr>
+			</th:block>
+			<a href="/myitems">すべてのアイテムを管理</a>
+		</div>
+		<h2>ログ</h2>
+		<div class="groupBox">
+			<p>c.kaminari.WebThing.WebThingApplication  : Started WebThingApplication in 1.582 seconds (process running for 1.722)</p>
+			<hr>
+			<p>o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''</p>
+			<hr>
+			<p>o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]</p>
+			<hr>
+			<a href="/mypage/logs">もっと見る</a>
+		</div>
+		<h2>メッセージを表示</h2>
+		<form method="get" action="/mypage/show" class="groupBox">
+			<input type="text" name="message" placeholder = "メッセージ" />
+			<hr>
+			<input type="submit" class="button" value="メッセージを表示" />
+		</form>
+	</div>
+</body>
+</html>

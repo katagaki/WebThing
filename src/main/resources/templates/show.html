@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>WebThing</title>
+<link rel="stylesheet" href="/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>メッセージ表示</h1>
+	<div onclick="history.back();" class="navButton topLeading">戻る</div>
+	<div class="groupContainer">
+		<div class="groupBox">
+			<b>メッセージは以下のとおりです：</b>
+			<hr>
+			<p th:text="|${message}|" />
+		</div>
+	</div>
+</body>
+</html>
