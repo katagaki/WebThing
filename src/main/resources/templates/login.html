@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>WebThing</title>
-<link rel="stylesheet" href="/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>WebThing</title>
+	<link rel="stylesheet" href="/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 	<h1>ユーザー認証</h1>
@@ -20,10 +20,10 @@
 			<input type="submit" class="button" value="サインイン" />
 		</form>
 		<div th:if="${param.error}" class="groupBox">
-			<b style="color: red;">Incorrect username and/or password.</b>
+			<b style="color: red;">ユーザー名またはパスワードが正しくありません。</b>
 		</div>
 		<div th:if="${param.logout}" class="groupBox">
-			<b>You were signed out.</b>
+			<b>サインアウトされました。</b>
 		</div>
 	</div>
 </body>

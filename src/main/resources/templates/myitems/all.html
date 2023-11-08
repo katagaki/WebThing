@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>マイアイテム</title>
+    <title>WebThing</title>
     <link rel="stylesheet" href="/style.css">
     <script src="/scripts/myitems.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
@@ -14,20 +14,23 @@
 <div class="groupContainer">
     <div class="groupBox">
         <th:block th:each="item, items:${items}" th:object="${item}">
-            <span class="horizontalStack">
-				<span class="verticalStack">
-                    <span class="horizontalStack">
+            <span class="verticalStack">
+                <span class="verticalStack">
+                    <span class="horizontalStackCenterAlign">
                         <b th:text="*{name}"></b>
                         <p style="font-family: monospace; font-size: 0.5rem;" class="secondary" th:text="|(*{id})|"></p>
+                        <span></span>
+                        <button th:onClick="|deleteItem(*{id});|" class="plainButton" style="height: 24px;">
+                            <img src="/icons/delete.svg" width="24" height="24" />
+                        </button>
                     </span>
                     <p class="secondary" th:text="*{brand}"></p>
-                    <p th:text="*{description}"></p>
-				</span>
-                <span></span>
-                <b style="font: -apple-system-title1; font-weight: bold; font-family: monospace;" th:text="*{cost}"></b>
-                <button th:onClick="|deleteItem(*{id});|" class="plainButton" style="height: 24px;">
-                    <img src="/icons/delete.svg" width="24" height="24" />
-                </button>
+                    <span class="horizontalStackTopAlign">
+                        <p th:text="*{description}"></p>
+                        <span></span>
+                        <b style="font: -apple-system-title1; font-weight: bold; font-family: monospace;" th:text="*{cost}"></b>
+                    </span>
+                </span>
             </span>
             <hr th:unless="${items.last}">
         </th:block>

@@ -32,6 +32,11 @@ public class MainController {
 		return "redirect:/login";
 	}
 
+	@GetMapping("/help")
+	public String help() {
+		return "help";
+	}
+
 	@GetMapping("/mypage")
 	public String mypage(Principal principal, Model model, HttpServletRequest request) {
 		Optional<User> userFromRepository = userRepository.findById(principal.getName());

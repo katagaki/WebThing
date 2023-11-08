@@ -201,11 +201,18 @@ hr {
 	border-radius: 8px;
 }
 
-.horizontalStack {
+.horizontalStackCenterAlign {
     display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: center;
+}
+
+.horizontalStackTopAlign {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: top;
 }
 
 .verticalStack {

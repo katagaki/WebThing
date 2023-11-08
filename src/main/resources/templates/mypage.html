@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>WebThing</title>
-<link rel="stylesheet" href="/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>WebThing</title>
+	<link rel="stylesheet" href="/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 	<h1>マイページ</h1>
@@ -23,7 +23,7 @@
 		<h2>マイアイテム</h2>
 		<div class="groupBox">
 			<th:block th:each="item, items:${items}" th:if="${items.index} <3" th:object="${item}">
-				<span class="horizontalStack">
+				<span class="horizontalStackCenterAlign">
 					<b th:text="*{name}"></b>
 					<span></span>
 					<p class="secondary" th:text="*{brand}"></p>
