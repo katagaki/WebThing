@@ -1,4 +1,4 @@
-package com.kaminari.WebThing.Items;
+package com.kaminari.WebThing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +9,6 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
-
-import com.kaminari.WebThing.Items.Item;
-import com.kaminari.WebThing.Items.ItemRepository;
 
 @Service
 public class ItemService {

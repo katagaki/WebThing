@@ -1,4 +1,4 @@
-package com.kaminari.WebThing.Items;
+package com.kaminari.WebThing;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

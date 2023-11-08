@@ -1,4 +1,4 @@
-package com.kaminari.WebThing.Security;
+package com.kaminari.WebThing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;

@@ -1,4 +1,4 @@
-package com.kaminari.WebThing.Security;
+package com.kaminari.WebThing;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 

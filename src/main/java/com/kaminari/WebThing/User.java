@@ -1,4 +1,4 @@
-package com.kaminari.WebThing.Users;
+package com.kaminari.WebThing;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;

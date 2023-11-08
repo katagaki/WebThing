@@ -1,4 +1,4 @@
-package com.kaminari.WebThing.Security;
+package com.kaminari.WebThing;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,9 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import com.kaminari.WebThing.Users.User;
-import com.kaminari.WebThing.Users.UserRepository;
 
 @Service
 public class WTUserDetailsService implements UserDetailsService {
